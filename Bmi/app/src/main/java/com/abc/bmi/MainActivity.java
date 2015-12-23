@@ -1,5 +1,6 @@
 package com.abc.bmi;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
         float height = Float.parseFloat(h);
         float bmi = weight / (height * height);
         Log.d("BMI", String.valueOf(bmi));
+        Toast.makeText(this, String.valueOf(bmi), Toast.LENGTH_LONG).show();
+        /*AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Hello");
+        builder.show();*/
+        new AlertDialog.Builder(this)
+                .setMessage(bmi+"")
+                .setTitle("BMI運算")
+                .setPositiveButton("OK", null)
+                .setNeutralButton("Cancel", null)
+                .show();
     }
 
     @Override

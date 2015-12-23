@@ -2,11 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jar="D:\android\projects16\Bmi\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\pre-dexed\debug\classes-a163024816b6e5788737dd9b7db25cd55c6d69f5.jar" />
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="D:\android\projects16\Bmi\app\build\intermediates\pre-dexed\debug\classes-84be2d47ff02b57c24886c76fdcd723746cf4a6d.jar" />
+    </item>
+    <item
+        jar="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\pre-dexed\debug\classes-a46735e8e76e60e5b8c4b770f280911f769defa7.jar" />
+    </item>
+    <item
+        jar="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\pre-dexed\debug\classes-2038cfb3c2f88b4925c3d41fee571a54eef429f3.jar" />
+    </item>
+    <item
+        jar="D:\android\projects16\Bmi\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="D:\android\projects16\Bmi\app\build\intermediates\pre-dexed\debug\classes-51a5a9fd58284394a2a1acffbc3209f286b8dcb6.jar" />
+    </item>
+    <item
+        jar="D:\android\projects16\Bmi\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="D:\android\projects16\Bmi\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-a762ac6d3abf315e2219130e0437dca2623aaf1d.jar" />
     </item>
     <item
         jar="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
@@ -30,18 +58,25 @@
         <dex dex="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\pre-dexed\debug\classes-b1c445bbf93caae815a5576a961b13cb09f69ff5.jar" />
     </item>
     <item
-        jar="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jar="D:\android\projects16\Bmi\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\pre-dexed\debug\classes-a46735e8e76e60e5b8c4b770f280911f769defa7.jar" />
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="D:\android\projects16\Bmi\app\build\intermediates\pre-dexed\debug\classes-7b3c15fed3f14c49b1812affb58a59308248dccb.jar" />
     </item>
     <item
-        jar="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jar="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\pre-dexed\debug\classes-a163024816b6e5788737dd9b7db25cd55c6d69f5.jar" />
+    </item>
+    <item
+        jar="D:\android\projects16\Bmi\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="C:\Users\tom\AndroidStudioProjects\Bmi\app\build\intermediates\pre-dexed\debug\classes-2038cfb3c2f88b4925c3d41fee571a54eef429f3.jar" />
+        <dex dex="D:\android\projects16\Bmi\app\build\intermediates\pre-dexed\debug\classes-1adf8c617f6a69bbd0947d0b28877aae3860796f.jar" />
     </item>
 
 </items>
