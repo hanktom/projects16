@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         float height = Float.parseFloat(h);
         float bmi = weight / (height * height);
         Intent intent = new Intent(this, ResultActivity.class);
-        intent.putExtra("BMI_EXTRA", bmi);
+        intent.putExtra(getString(R.string.bmi_extra), bmi);
         startActivity(intent);
     }
 
