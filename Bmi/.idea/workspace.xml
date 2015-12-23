@@ -11,8 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8f5098ef-f486-438d-b497-e5899d1b2967" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/abc/bmi/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/abc/bmi/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/abc/bmi/ResultActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/abc/bmi/ResultActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Bmi.iws" />
@@ -41,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/abc/bmi/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="60" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.47741935">
+              <caret line="127" column="13" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
               <folding>
                 <element signature="e#2707#2736#0" expanded="true" />
               </folding>
@@ -53,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResultActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ResultActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/abc/bmi/ResultActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41290322">
+            <state vertical-scroll-proportion="0.0">
               <caret line="24" column="7" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="7" />
               <folding>
                 <element signature="e#635#664#0" expanded="true" />
@@ -1573,8 +1571,8 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_result.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/abc/bmi/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/abc/bmi/ResultActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/abc/bmi/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -1779,6 +1777,8 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_23_x86" />
     <property name="FullScreen" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -1976,7 +1976,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450881496510</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="抽取字串至資源">
+      <created>1450881596147</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1450881596147</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2030,7 +2036,8 @@
     <MESSAGE value="AlertDialog對話框與按鈕" />
     <MESSAGE value="多國語系" />
     <MESSAGE value="使用第二個Activity顯示BMI" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用第二個Activity顯示BMI" />
+    <MESSAGE value="抽取字串至資源" />
+    <option name="LAST_COMMIT_MESSAGE" value="抽取字串至資源" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2132,22 +2139,22 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/abc/bmi/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/abc/bmi/ResultActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="60" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="60" />
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="7" />
           <folding>
-            <element signature="e#2707#2736#0" expanded="true" />
+            <element signature="e#635#664#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/abc/bmi/ResultActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/abc/bmi/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41290322">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.47741935">
+          <caret line="127" column="13" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
           <folding>
-            <element signature="e#635#664#0" expanded="true" />
+            <element signature="e#2707#2736#0" expanded="true" />
           </folding>
         </state>
       </provider>
