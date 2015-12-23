@@ -1,6 +1,8 @@
 package com.abc.bmi;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -25,9 +27,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViews();
+        bHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(getApplicationContext())
+                        .setTitle("BMI說明")
+                        .setMessage("體重(kg)/身高的平方(m)")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(MainActivity.this, "說明完成",
+                                        Toast.LENGTH_LONG).show();
+                            }
+                        })
+                        .show();
+            }
+        });
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,17 +68,9 @@ public class MainActivity extends AppCompatActivity {
         float weight = Float.parseFloat(w);
         float height = Float.parseFloat(h);
         float bmi = weight / (height * height);
-        Log.d("BMI", String.valueOf(bmi));
-        Toast.makeText(this, String.valueOf(bmi), Toast.LENGTH_LONG).show();
-        /*AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Hello");
-        builder.show();*/
-        new AlertDialog.Builder(this)
-                .setMessage(bmi+"")
-                .setTitle("BMI運算")
-                .setPositiveButton("OK", null)
-                .setNeutralButton("Cancel", null)
-                .show();
+        Intent intent = new Intent(this, ResultActivity.class);
+        intent.putExtra("BMI_EXTRA", bmi);
+        startActivity(intent);
     }
 
     @Override
