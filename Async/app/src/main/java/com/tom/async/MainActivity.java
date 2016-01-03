@@ -77,7 +77,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void go3(View v){
-
+        new Job3Task().execute(6);
+    }
+    class Job3Task extends AsyncTask<Integer, Integer, Void>{
+        @Override
+        protected Void doInBackground(Integer... params) {
+            for (int i=params[0]; i>0; i--){
+                publishProgress(i);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            return null;
+        }
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+            TextView info = (TextView) findViewById(R.id.info);
+            info.setText(String.valueOf(values[0]));
+        }
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            TextView info = (TextView) findViewById(R.id.info);
+            info.setText("DONE");
+        }
     }
 
     @Override
