@@ -53,10 +53,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     public void go2(View v){
-
+        new Job2Task().execute(3);
     }
+    class Job2Task extends AsyncTask<Integer, Void, Void>{
+
+        @Override
+        protected Void doInBackground(Integer... params) {
+            try {
+                Thread.sleep(params[0]*1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            TextView info = (TextView) findViewById(R.id.info);
+            info.setText("DONE");
+        }
+    }
+
     public void go3(View v){
 
     }
