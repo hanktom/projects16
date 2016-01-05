@@ -12,11 +12,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     boolean logon = false;
     public static final int FUNC_LOGIN = 1;
     String func[] = {"餘額查詢", "交易明細", "最新消息", "投資理財", "離開"};
@@ -24,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //使用GridView
+        GridView grid = (GridView)findViewById(R.id.grid);
+        ArrayAdapter gAdapter =
+                new ArrayAdapter(this, android.R.layout.simple_list_item_1, func);
+        grid.setAdapter(gAdapter);
+        grid.setOnItemClickListener(this);
         //使用Spinner
         Spinner notify = (Spinner)findViewById(R.id.notify_spinner);
         final ArrayAdapter<CharSequence> nAdapter = ArrayAdapter.createFromResource(
@@ -38,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         nAdapter.getItem(position), Toast.LENGTH_LONG)
                         .show();
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
@@ -101,5 +109,22 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        switch(position){
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4: //結束
+                finish();
+                break;
+        }
     }
 }
