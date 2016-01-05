@@ -10,8 +10,11 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     boolean logon = false;
@@ -21,6 +24,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //使用Spinner
+        Spinner notify = (Spinner)findViewById(R.id.notify_spinner);
+        final ArrayAdapter<CharSequence> nAdapter = ArrayAdapter.createFromResource(
+                this, R.array.notify_array, android.R.layout.simple_spinner_item );
+        nAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        notify.setAdapter(nAdapter);
+        notify.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(
+                        MainActivity.this,
+                        nAdapter.getItem(position), Toast.LENGTH_LONG)
+                        .show();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        notify.getSelectedItem().toString();
         //使用ListView
         ListView list = (ListView)findViewById(R.id.list);
         ArrayAdapter adapter =

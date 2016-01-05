@@ -1,6 +1,7 @@
 package com.tom.atm;
 
 import android.app.AlertDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,9 +17,12 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        EditText useridEd = (EditText) findViewById(R.id.userid);
+        SharedPreferences setting = getSharedPreferences("atm", MODE_PRIVATE);
+        useridEd.setText(setting.getString("PREF_USERID", ""));
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +39,10 @@ public class LoginActivity extends AppCompatActivity {
         String uid = edUserid.getText().toString();
         String pw = edPasswd.getText().toString();
         if (uid.equals("jack") && pw.equals("1234")){ //登入成功
+            SharedPreferences setting = getSharedPreferences("atm", MODE_PRIVATE);
+            setting.edit()
+                    .putString("PREF_USERID", uid)
+                    .commit();
             Toast.makeText(this, "登入成功", Toast.LENGTH_LONG).show();
             getIntent().putExtra("LOGIN_USERID", uid);
             getIntent().putExtra("LOGIN_PASSWD", pw);
