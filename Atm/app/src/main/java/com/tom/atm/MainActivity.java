@@ -10,11 +10,15 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
@@ -32,8 +36,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
         //使用GridView
         GridView grid = (GridView)findViewById(R.id.grid);
-        ArrayAdapter gAdapter =
-                new ArrayAdapter(this, android.R.layout.simple_list_item_1, func);
+//        ArrayAdapter gAdapter =
+//                new ArrayAdapter(this, android.R.layout.simple_list_item_1, func);
+        IconAdapter gAdapter = new IconAdapter();
         grid.setAdapter(gAdapter);
         grid.setOnItemClickListener(this);
         //使用Spinner
@@ -116,18 +121,45 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return super.onOptionsItemSelected(item);
     }
 
+    class IconAdapter extends BaseAdapter{
+        @Override
+        public int getCount() {
+            return func.length;
+        }
+        @Override
+        public Object getItem(int position) {
+            return func[position];
+        }
+        @Override
+        public long getItemId(int position) {
+            return icons[position];
+        }
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View row = convertView;
+            if (row == null){
+                row = getLayoutInflater().inflate(R.layout.item_row, null);
+                ImageView image = (ImageView) row.findViewById(R.id.item_image);
+                TextView text = (TextView) row.findViewById(R.id.item_text);
+                image.setImageResource(icons[position]);
+                text.setText(func[position]);
+            }
+            return row;
+        }
+    }
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        switch(position){
-            case 0:
+        switch((int)id){
+            case R.drawable.func_balance:
                 break;
-            case 1:
+            case R.drawable.func_history:
                 break;
-            case 2:
+            case R.drawable.func_news:
                 break;
-            case 3:
+            case R.drawable.func_finance:
                 break;
-            case 4: //結束
+            case R.drawable.func_exit: //結束
                 finish();
                 break;
         }
