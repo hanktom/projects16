@@ -100,6 +100,7 @@ public class LoginActivity extends AppCompatActivity {
             if (logon) {
                 //儲存帳號至SharedPreferences
                 //結束本畫面, 回到MainActivity
+                setResult(RESULT_OK, getIntent());
                 finish();
             }else {
                 new AlertDialog.Builder(LoginActivity.this)
